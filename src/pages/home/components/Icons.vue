@@ -19,55 +19,22 @@
 
 export default {
   name: 'HomeIcons',
+  props:{
+      list:Array
+  },
   data () {
       return {
         swiperOption: {
             autoplay: false
         },
-        iconList:[{
-          "id": "0001",
-          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-          "desc": "景点门票"
-        },{
-          "id": "0002",
-          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-          "desc": "景点门票"
-        },{
-          "id": "0003",
-          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-          "desc": "景点门票"
-        },{
-          "id": "0004",
-          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-          "desc": "景点门票"
-        },{
-          "id": "0005",
-          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-          "desc": "景点门票"
-        },{
-          "id": "0006",
-          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-          "desc": "景点门票"
-        },{
-          "id": "0007",
-          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-          "desc": "景点门票"
-        },{
-          "id": "0008",
-          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-          "desc": "景点门票"
-        },{
-          "id": "0009",
-          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-          "desc": "景点门票"
-        },]
+        
     }
   },
 
   computed : {
       pages () {
           const pages=[]
-          this.iconList.forEach((ele,index)=>{
+          this.list.forEach((ele,index)=>{
               const page=Math.floor(index/8)
               if(!pages[page]){
                   pages[page]=[]

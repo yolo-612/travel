@@ -4,7 +4,7 @@
         <ul>
             <li
                 class="item border-bottom"
-                v-for="item of weekendList"
+                v-for="item of list"
                 :key="item.id"
             >
                 <div class="item-img-wrapper">
@@ -23,24 +23,12 @@
 
 export default {
   name: 'HomeHeader',
+  props:{
+      list:Array
+  },
   data () {
       return {
-          weekendList:[{
-          "id": "0001",
-          "imgUrl": "http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg",
-          "title": "北京温泉排行榜",
-          "desc": "细数北京温泉，温暖你的冬天"
-        }, {
-          "id": "0002",
-          "imgUrl": "http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg",
-          "title": "北京温泉排行榜",
-          "desc": "细数北京温泉，温暖你的冬天"
-        }, {
-          "id": "0003",
-          "imgUrl": "http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg",
-          "title": "北京温泉排行榜",
-          "desc": "细数北京温泉，温暖你的冬天"
-        }, ]
+          
       }
         
 
