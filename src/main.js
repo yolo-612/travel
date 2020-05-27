@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+//导入vuex
+import store from "./store"
+
 //引入reset样式，和一像素边框
 import "styles/reset.css"
 import "styles/border.css"
@@ -29,6 +32,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

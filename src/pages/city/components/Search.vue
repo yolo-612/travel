@@ -9,6 +9,7 @@
           class="search-item border-bottom"
           v-for="item of list"
           :key="item.id"
+          @click="handleCityClick(item.name)"
         >
          {{item.name}} 
         </li>
@@ -37,7 +38,12 @@ export default {
       }
   },
   methods:{
-
+      handleCityClick(city){
+          //通过 dispath---> actions 再有actions调用 commit----->mutations
+          // this.$store.dispatch("changeCity",city)   //去改vuex里面的状态要这样,要先dispath到action上
+          this.$store.commit("changeCity",city)
+          this.$router.push("/")
+      }
   },
   computed:{
       hasNoData(){
